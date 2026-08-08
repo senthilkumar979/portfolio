@@ -1,19 +1,5 @@
-import Image from "next/image";
-
 export const PowerOfTeamEventsPost = () => (
   <div className="prose-portfolio">
-    <figure>
-      <Image
-        src="/blog/power-of-team-events/cover.jpg"
-        alt="The power of team events — uniting and inspiring success"
-        width={1024}
-        height={575}
-        className="h-auto w-full rounded-sm ring-1 ring-border"
-        priority
-      />
-      <figcaption>Team building</figcaption>
-    </figure>
-
     <p>
       Team events — whether they&apos;re team-building activities, off-site
       retreats, or casual outings — play a crucial role in fostering a cohesive

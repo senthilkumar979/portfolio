@@ -18,6 +18,8 @@ export interface BlogPost {
   date: string;
   tags: string[];
   excerpt: string;
+  cover: string;
+  coverAlt: string;
   mediumUrl?: string;
   Body: ComponentType;
 }
@@ -39,6 +41,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["MentorBridge", "Communication", "Podcast"],
     excerpt:
       "How MentorBridge uses student interview podcasts to build fluent professional English communication — not just technical skill.",
+    cover: "/blog/mentor-bridge-podcast/cover.png",
+    coverAlt:
+      "Two people with headphones connected by a bridge and shared microphone glow",
     mediumUrl:
       "https://senthilk979.medium.com/building-bridges-one-conversation-at-a-time-introducing-the-mentor-bridge-podcast-0a1d74a49cee",
     Body: MentorBridgePodcastPost,
@@ -50,6 +55,8 @@ export const blogPosts: BlogPost[] = [
     tags: ["Communication", "Storytelling", "Mentorship"],
     excerpt:
       "Storytelling is not optional soft skill fluff — it is how engineers make complex ideas land in emails, pitches, and classrooms.",
+    cover: "/blog/storytelling-practice/cover.png",
+    coverAlt: "Open book with pages transforming into flowing speech waves",
     mediumUrl:
       "https://senthilk979.medium.com/why-storytelling-practice-matters-in-communication-c9c2602c8ef8",
     Body: StorytellingPracticePost,
@@ -61,6 +68,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["Leadership", "Inspiration", "Growth"],
     excerpt:
       "I don’t look for perfect people — I look for powerful qualities. Lessons on discipline, persistence, resilience, vision, and service.",
+    cover: "/blog/inspirations-controversial/cover.png",
+    coverAlt:
+      "A crystal prism splitting light into many facets of strength and character",
     mediumUrl:
       "https://senthilk979.medium.com/what-i-learned-from-my-inspirations-even-the-controversial-ones-332b73211b22",
     Body: InspirationsControversialPost,
@@ -72,6 +82,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["Engineering", "Legacy", "Architecture"],
     excerpt:
       "A structured decision framework — and a small rewrite spike — that led to refactor first, rewrite later on an 8-year-old React app.",
+    cover: "/blog/refactor-or-rewrite/cover.png",
+    coverAlt:
+      "Forked path between tangled legacy code being untangled and a clean rebuild scaffold",
     mediumUrl:
       "https://senthilk979.medium.com/refactor-or-rewrite-how-i-chose-the-right-path-in-a-real-world-project-6be108b106da",
     Body: RefactorOrRewritePost,
@@ -83,6 +96,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["Leadership", "Team", "Workplace"],
     excerpt:
       "Dedication, curiosity, and going the extra mile — a practical flow for becoming a key asset on any engineering team.",
+    cover: "/blog/standing-out-in-a-team/cover.png",
+    coverAlt:
+      "One illuminated figure walking slightly ahead of a team of softer silhouettes",
     mediumUrl:
       "https://senthilk979.medium.com/standing-out-in-a-team-a-guide-to-excel-c0d56c058c4f",
     Body: StandingOutInATeamPost,
@@ -94,6 +110,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["Leadership", "Team", "Productivity"],
     excerpt:
       "Delegation isn’t offloading work — it’s leveraging team strengths, setting clear expectations, and freeing developers to focus on what matters most.",
+    cover: "/blog/how-to-delegate-effectively/cover.png",
+    coverAlt:
+      "A leader releasing glowing task orbs that teammates catch and carry",
     mediumUrl:
       "https://senthilk979.medium.com/how-to-delegate-effectively-e614039d1907",
     Body: HowToDelegateEffectivelyPost,
@@ -105,6 +124,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["Confidence", "Growth", "Mindset"],
     excerpt:
       "You will never feel completely ready — confidence is a byproduct of action. Embrace the fear and do it scared.",
+    cover: "/blog/unleashing-confidence/cover.png",
+    coverAlt:
+      "A silhouette stepping from dense fog onto a clear glowing path",
     mediumUrl:
       "https://senthilk979.medium.com/unleashing-confidence-through-action-even-when-scared-3b8d5ea91b5a",
     Body: UnleashingConfidencePost,
@@ -116,6 +138,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["Team Building", "Collaboration", "Teamwork"],
     excerpt:
       "Retreats, cook-offs, and hackathons — how team events strengthen bonds, boost morale, and unlock collaboration.",
+    cover: "/blog/power-of-team-events/cover.png",
+    coverAlt:
+      "Team silhouettes gathered in a circle with a shared glow of connection",
     mediumUrl:
       "https://senthilk979.medium.com/the-power-of-team-events-uniting-and-inspiring-success-9cc9d3b35a53",
     Body: PowerOfTeamEventsPost,
@@ -128,6 +153,8 @@ export const blogPosts: BlogPost[] = [
     tags: ["Career", "Leadership", "Growth"],
     excerpt:
       "Low-profile tactics for climbing the ladder — clear goals, quiet excellence, mentorship, and tactful ambition.",
+    cover: "/blog/stealthy-strategies/cover.png",
+    coverAlt: "Quiet ascending stairs fading into mist with a subtle light path",
     mediumUrl:
       "https://senthilk979.medium.com/stealthy-strategies-ascending-the-corporate-job-ladder-with-minimal-disruption-f891cc64aabe",
     Body: StealthyStrategiesPost,
@@ -140,6 +167,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["Migration", "Technical Debt", "Consulting"],
     excerpt:
       "A ten-step playbook for selling modernization — pain points, business case, phased delivery, and proof-of-concept momentum.",
+    cover: "/blog/persuading-clients-migration/cover.png",
+    coverAlt:
+      "An old cracked tower transforming into a modern glass structure across a bridge of light",
     Body: PersuadingClientsMigrationPost,
   },
   {
@@ -150,6 +180,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["Leadership", "Transparency", "Culture"],
     excerpt:
       "Why transparency builds trust — with lessons from Nadella, Barra, and Pichai, plus practical habits for likable leaders.",
+    cover: "/blog/transparent-leadership/cover.png",
+    coverAlt:
+      "A leader and team visible through a clear glass panel with open light passing through",
     mediumUrl:
       "https://senthilk979.medium.com/the-power-of-transparent-leadership-inspiring-trust-and-uniting-teams-92fe1a1d1cef",
     Body: TransparentLeadershipPost,
@@ -161,6 +194,9 @@ export const blogPosts: BlogPost[] = [
     tags: ["React", "Migration", "Legacy"],
     excerpt:
       "Why teams move off AngularJS and Backbone — better DX, performance, scalability, ecosystem, and long-term viability with React.",
+    cover: "/blog/migrating-to-react/cover.png",
+    coverAlt:
+      "Tangled legacy nodes transforming into a clean modular component tree",
     mediumUrl:
       "https://senthilk979.medium.com/the-necessity-of-migrating-legacy-applications-to-react-js-45a3e0abd5d1",
     Body: MigratingToReactPost,

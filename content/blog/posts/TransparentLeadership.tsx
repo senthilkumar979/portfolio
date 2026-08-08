@@ -1,18 +1,5 @@
-import Image from "next/image";
-
 export const TransparentLeadershipPost = () => (
   <div className="prose-portfolio">
-    <figure>
-      <Image
-        src="/blog/transparent-leadership/cover.jpg"
-        alt="Transparent leadership — helping others rise through trust and shared progress"
-        width={1024}
-        height={1024}
-        className="h-auto w-full max-w-xl rounded-sm ring-1 ring-border"
-        priority
-      />
-    </figure>
-
     <p>
       Leadership is an art that requires a delicate balance of various qualities
       and skills. One of the most essential attributes of an effective leader is

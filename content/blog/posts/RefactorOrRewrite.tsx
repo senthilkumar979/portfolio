@@ -2,17 +2,6 @@ import Image from "next/image";
 
 export const RefactorOrRewritePost = () => (
   <div className="prose-portfolio">
-    <figure>
-      <Image
-        src="/blog/refactor-or-rewrite/01-cover.jpg"
-        alt="Case study: Refactor or Rewrite — how I chose the right path in a real-world project"
-        width={1024}
-        height={307}
-        className="h-auto w-full rounded-sm ring-1 ring-border"
-        priority
-      />
-    </figure>
-
     <blockquote>
       <p>
         Should we keep fixing the car while it&apos;s moving or just build a new

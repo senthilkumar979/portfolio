@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export const StandingOutInATeamPost = () => (
   <div className="prose-portfolio">
     <p>
@@ -13,18 +11,6 @@ export const StandingOutInATeamPost = () => (
       Here&apos;s how I ensure that my contributions don&apos;t go unnoticed —
       and how you can do the same to excel in your role.
     </p>
-
-    <figure>
-      <Image
-        src="/blog/standing-out-in-a-team/hero.jpg"
-        alt="Standing out in a team — five steps from understanding the business to presenting solutions"
-        width={1024}
-        height={768}
-        className="h-auto w-full rounded-sm ring-1 ring-border"
-        priority
-      />
-      <figcaption>Flow to stand out in a team</figcaption>
-    </figure>
 
     <h2>Understanding the business behind the project</h2>
     <p>

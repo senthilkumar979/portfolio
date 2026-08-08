@@ -1,18 +1,5 @@
-import Image from "next/image";
-
 export const PersuadingClientsMigrationPost = () => (
   <div className="prose-portfolio">
-    <figure>
-      <Image
-        src="/blog/persuading-clients-migration/cover.jpg"
-        alt="Embrace application migration — unlocking success when persuading clients to modernize technical debt"
-        width={1024}
-        height={575}
-        className="h-auto w-full rounded-sm ring-1 ring-border"
-        priority
-      />
-    </figure>
-
     <p>
       When convincing a client to migrate an application with a significant
       amount of technical debt and an outdated tech stack, it&apos;s important

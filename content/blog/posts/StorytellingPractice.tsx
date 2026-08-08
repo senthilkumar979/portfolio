@@ -1,18 +1,5 @@
-import Image from "next/image";
-
 export const StorytellingPracticePost = () => (
   <div className="prose-portfolio">
-    <figure>
-      <Image
-        src="/blog/storytelling-practice/cover.png"
-        alt="Storytelling in communication — a narrative path from opening hook to lasting takeaway"
-        width={1536}
-        height={1024}
-        className="h-auto w-full rounded-sm ring-1 ring-border"
-        priority
-      />
-    </figure>
-
     <p>
       When we think of &quot;storytelling,&quot; many imagine fairy tales or
       bedtime stories. But in reality, storytelling is at the heart of effective

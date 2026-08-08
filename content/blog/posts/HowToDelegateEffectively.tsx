@@ -1,19 +1,5 @@
-import Image from "next/image";
-
 export const HowToDelegateEffectivelyPost = () => (
   <div className="prose-portfolio">
-    <figure>
-      <Image
-        src="/blog/how-to-delegate-effectively/cover.jpg"
-        alt="How to delegate effectively — work together, accomplish together"
-        width={1024}
-        height={575}
-        className="h-auto w-full rounded-sm ring-1 ring-border"
-        priority
-      />
-      <figcaption>Work together, accomplish together</figcaption>
-    </figure>
-
     <p>
       In the fast-paced realm of corporate jobs, effective delegation is a
       critical skill that can significantly impact productivity and success. For

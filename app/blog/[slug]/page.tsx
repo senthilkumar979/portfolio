@@ -28,6 +28,11 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      images: [{ url: post.cover, alt: post.coverAlt }],
+    },
   };
 }
 
@@ -59,6 +64,8 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
           date={post.date}
           tags={post.tags}
           excerpt={post.excerpt}
+          cover={post.cover}
+          coverAlt={post.coverAlt}
           mediumUrl={post.mediumUrl}
         />
 

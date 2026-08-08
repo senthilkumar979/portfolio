@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export const UnleashingConfidencePost = () => (
   <div className="prose-portfolio">
     <p>
@@ -40,18 +38,6 @@ export const UnleashingConfidencePost = () => (
       futile endeavor. Instead, they chose to do it scared and discovered that
       confidence emerges after taking action, not before.
     </p>
-
-    <figure>
-      <Image
-        src="/blog/unleashing-confidence/cover.jpg"
-        alt="You will never feel ready to start something that scares you — so do it scared. Confidence builds after we take action, not before."
-        width={1024}
-        height={1024}
-        className="h-auto w-full max-w-lg rounded-sm ring-1 ring-border"
-        priority
-      />
-      <figcaption>Unleashing confidence</figcaption>
-    </figure>
 
     <p>
       Imagine a new cricketer who has dreamt of playing for a team. The

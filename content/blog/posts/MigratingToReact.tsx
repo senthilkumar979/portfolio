@@ -1,18 +1,5 @@
-import Image from "next/image";
-
 export const MigratingToReactPost = () => (
   <div className="prose-portfolio">
-    <figure>
-      <Image
-        src="/blog/migrating-to-react/cover.png"
-        alt="Migrating legacy applications to React — from tangled frameworks to a modular component architecture"
-        width={1536}
-        height={1024}
-        className="h-auto w-full rounded-sm ring-1 ring-border"
-        priority
-      />
-    </figure>
-
     <p>
       In today&apos;s rapidly evolving technology landscape, staying up to date
       with the latest frameworks and technologies is essential for maintaining

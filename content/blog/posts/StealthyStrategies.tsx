@@ -1,19 +1,5 @@
-import Image from "next/image";
-
 export const StealthyStrategiesPost = () => (
   <div className="prose-portfolio">
-    <figure>
-      <Image
-        src="/blog/stealthy-strategies/cover.png"
-        alt="Stealthy strategies — ascending the corporate job ladder with minimal disruption"
-        width={1536}
-        height={1024}
-        className="h-auto w-full rounded-sm ring-1 ring-border"
-        priority
-      />
-      <figcaption>Stealthy strategies</figcaption>
-    </figure>
-
     <p>
       Climbing the corporate ladder requires a combination of skills,
       strategies, and professional relationships.
