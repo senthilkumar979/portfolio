@@ -119,6 +119,52 @@ body {
   text-underline-offset: 3px;
 }
 
+.prose-portfolio blockquote {
+  margin: 1.75rem 0;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--accent);
+  color: var(--foreground);
+  font-style: italic;
+}
+
+.prose-portfolio blockquote p {
+  margin-bottom: 0;
+}
+
+.prose-portfolio figure {
+  margin: 2rem 0 2.5rem;
+}
+
+.prose-portfolio figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--foreground-muted);
+}
+
+.prose-portfolio pre {
+  margin: 1.5rem 0 1.75rem;
+  padding: 1rem 1.125rem;
+  overflow-x: auto;
+  border-radius: 0.25rem;
+  background: var(--background-elevated);
+  border: 1px solid var(--border);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--foreground);
+}
+
+.prose-portfolio code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.875em;
+}
+
+.prose-portfolio :not(pre) > code {
+  padding: 0.15em 0.4em;
+  border-radius: 0.2rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
