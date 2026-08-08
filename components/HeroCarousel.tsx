@@ -211,7 +211,7 @@ export const HeroCarousel = () => {
         >
           <div className="flex items-start gap-3">
             {active.logo ? (
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-background ring-1 ring-border">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-foreground ring-1 ring-border">
                 <Image
                   src={active.logo}
                   alt=""

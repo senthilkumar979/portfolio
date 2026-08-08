@@ -20,8 +20,10 @@ export const heroCarouselItems: HeroCarouselItem[] = [
     kind: "Personal",
     role: "Founder / Product",
     description:
-      "Personal product focused on security-minded workflows and safer engineering practices.",
+      "Web security platform with OAuth, MFA, captcha, and AI-assisted analysis for teams.",
+    href: "https://securosphere.mentorbridge.in",
     logo: "/products/securosphere.png",
+    external: true,
   },
   {
     id: "stublab",
@@ -29,8 +31,10 @@ export const heroCarouselItems: HeroCarouselItem[] = [
     kind: "Personal",
     role: "Founder / Product",
     description:
-      "Personal tooling product for stubbing and exercising APIs during development and testing.",
+      "Intelligent API stubbing for crafting and testing APIs without backend database dependencies.",
+    href: "https://stublab.mentorbridge.in",
     logo: "/products/stublab.png",
+    external: true,
   },
   {
     id: "stupro",
@@ -38,8 +42,10 @@ export const heroCarouselItems: HeroCarouselItem[] = [
     kind: "Personal",
     role: "Founder / Product",
     description:
-      "Personal product built to support student and early-career engineer productivity.",
+      "Productivity product supporting students and early-career engineers on the path to industry.",
+    href: "https://stupro.mentorbridge.in",
     logo: "/products/stupro.png",
+    external: true,
   },
   {
     id: "peacock",
@@ -60,7 +66,7 @@ export const heroCarouselItems: HeroCarouselItem[] = [
     description:
       "Mentorship initiative bridging academia and industry — 100+ engineers trained, 25+ placements.",
     href: profile.socials.mentorbridge,
-    logo: "/products/mentorbridge.png",
+    logo: "/products/mentorbridge-sm.png",
     external: true,
   },
   {
@@ -99,7 +105,7 @@ export const heroCarouselItems: HeroCarouselItem[] = [
     kind: "Work",
     role: "Senior Front End Engineer",
     description:
-      "Built a mobile-first React application and design system with TanStack Query, Redux, and Jotai.",
+      "Built a mobile-first React application with Vite/Next.js, micro frontends, TanStack Query/Table, and Dexie.js / IndexedDB.",
     href: "/experience/oro",
     logo: "/companies/oroinc.png",
   },

@@ -13,7 +13,7 @@ export const SelectedWork = () => (
       <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div className="max-w-2xl">
           <p className="text-[0.6875rem] font-medium uppercase tracking-[0.28em] text-accent">
-            Selected work
+            Selected projects
           </p>
           <h2 className="mt-5 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             Cases that show how I build
@@ -25,10 +25,10 @@ export const SelectedWork = () => (
         </div>
 
         <Link
-          href="/work"
+          href="/projects"
           className="shrink-0 text-sm font-medium text-accent transition-opacity hover:opacity-80"
         >
-          All work →
+          All projects →
         </Link>
       </div>
 
@@ -63,7 +63,7 @@ export const SelectedWork = () => (
                   {item.stack.join(" · ")}
                 </p>
               </div>
-              <div className="flex items-center gap-2 md:flex-col justify-between min-h-full items-centermd:items-end">
+              <div className="flex items-center gap-2 md:flex-col justify-between min-h-full items-center md:items-end">
                 {"logo" in item && item.logo ? (
                   <Image
                     src={item.logo}
