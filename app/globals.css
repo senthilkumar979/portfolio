@@ -1,26 +1,156 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0f1419;
+  --background-elevated: #161c24;
+  --foreground: #f2f4f6;
+  --foreground-muted: #9aa3ad;
+  --accent: #00c2a8;
+  --accent-soft: rgba(0, 194, 168, 0.12);
+  --border: rgba(242, 244, 246, 0.1);
+  --grid-line: rgba(242, 244, 246, 0.04);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-elevated: var(--background-elevated);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-border: var(--border);
+  --font-sans: var(--font-plex-sans);
+  --font-display: var(--font-plex-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  max-width: 100%;
+  overflow-x: clip;
+  /* Keep a single document scrollport — never pair with body overflow-y */
+  overflow-y: auto;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-plex-sans), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-feature-settings: "kern" 1, "liga" 1;
+  letter-spacing: -0.011em;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.atmosphere {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(0, 194, 168, 0.18), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 100% 20%, rgba(0, 194, 168, 0.06), transparent 50%),
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size:
+    auto,
+    auto,
+    64px 64px,
+    64px 64px;
+}
+
+.prose-portfolio {
+  color: var(--foreground-muted);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.prose-portfolio h2 {
+  color: var(--foreground);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose-portfolio h3 {
+  color: var(--foreground);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-portfolio p {
+  margin-bottom: 1.25rem;
+}
+
+.prose-portfolio ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-portfolio ol {
+  list-style: decimal;
+  padding-left: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-portfolio li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-portfolio strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.prose-portfolio a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes hero-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.hero-marquee {
+  animation: hero-marquee 45s linear infinite;
+}
+
+.hero-marquee-paused {
+  animation-play-state: paused;
+}
+
+/* Isolate the track so w-max never expands page width (Safari/WebKit) */
+.hero-marquee-viewport {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+  overflow-y: clip;
+  contain: inline-size;
 }
