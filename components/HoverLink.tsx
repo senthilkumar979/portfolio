@@ -155,7 +155,7 @@ export const HoverLink = ({
             <span className="block text-sm font-semibold tracking-tight text-foreground">
               {preview.title}
             </span>
-            <span className="mt-1 block text-[0.8rem] leading-relaxed text-foreground-muted">
+            <span className="mt-1 block text-[0.8rem] leading-relaxed text-foreground-muted text-wrap">
               {preview.description}
             </span>
             <span className="mt-2.5 block text-[0.7rem] font-medium tracking-wide text-accent">
