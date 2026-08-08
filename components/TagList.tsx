@@ -14,7 +14,7 @@ export const TagList = ({ items, title }: TagListProps) => (
       {items.map((item) => (
         <li
           key={item}
-          className="rounded-md bg-accent-soft px-2.5 py-1 text-xs text-accent"
+          className="rounded-md bg-accent-soft px-2.5 py-1 text-xs text-accent transition-[background-color,color,transform] duration-200 hover:-translate-y-0.5 hover:bg-accent hover:text-background"
         >
           {item}
         </li>

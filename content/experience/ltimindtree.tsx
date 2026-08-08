@@ -26,8 +26,8 @@ export const LtiBody = () => (
 
     <h2>Stack</h2>
     <p>
-      Modern React/TypeScript frontends, full-stack delivery workflows, and
-      Agile team practices oriented around modular platform architecture.
+      React, TypeScript, Material UI, Ag-Grid, Redux Toolkit, and Micro
+      Frontends — modular enterprise UI delivery with dense data surfaces.
     </p>
 
     <h2>What I took forward</h2>

@@ -36,7 +36,7 @@ export const linkPreviews = {
     description:
       "Mentorship initiative bridging academia and industry — 100+ engineers trained, 25+ full-time placements.",
     meta: "mentorbridge.in",
-    logo: "/products/mentorbridge.png",
+    logo: "/products/mentorbridge-sm.png",
     external: true,
   },
   linkedin: {

@@ -8,12 +8,10 @@ export const ImpactStrip = () => (
   <section className="border-t border-border">
     <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 md:py-28">
       <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-0 items-center justify-items-center">
-        {impactMetrics.map((metric, index) => (
+        {impactMetrics.map((metric) => (
           <li
             key={metric.label}
-            className={`relative flex flex-col items-center rounded-xl bg-background shadow-md px-6 py-8 transition-transform hover:scale-[1.035] hover:shadow-lg ${
-              index > 0 ? "lg:ml-0 lg:border-l lg:border-border" : "lg:pl-0"
-            }`}
+            className={`relative flex flex-col items-center rounded-xl bg-background shadow-lg px-6 py-8 transition-transform hover:scale-[1.035] hover:shadow-lg ${"border-l border-t border-border hover:border-accent/50"}`}
           >
             {metric?.logo && (
               <div className="flex items-center justify-center w-16 h-16 rounded-full bg-accent/5 mb-4 shadow-sm">

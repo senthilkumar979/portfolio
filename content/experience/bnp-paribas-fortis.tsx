@@ -31,9 +31,9 @@ export const BnpBody = () => (
 
     <h2>Stack</h2>
     <p>
-      React, TypeScript, JavaScript, Next.js, Redux Toolkit, Node.js, Express,
-      REST APIs, Styled-Components, Dexie.js / IndexedDB, React Testing Library,
-      Micro Frontends, AWS, Agile / Scrum.
+      React, TypeScript, JavaScript, Redux Toolkit, Node.js, Express, REST APIs,
+      Styled-Components, React Testing Library, Micro Frontends, and Agile /
+      Scrum.
     </p>
 
     <h2>What I took forward</h2>

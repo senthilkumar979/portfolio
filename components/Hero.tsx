@@ -84,22 +84,22 @@ export const Hero = () => {
               hidden: { opacity: shouldReduceMotion ? 1 : 0, y: 24 },
               show: { opacity: 1, y: 0, transition: { duration: 0.85, ease } },
             }}
-            className="mt-5 text-[clamp(2.35rem,10vw,6.5rem)] font-semibold leading-[0.92] tracking-[-0.045em] text-foreground"
+            className="mt-5 text-[clamp(2.35rem,10vw,6.5rem)] font-semibold leading-[0.92] tracking-[-0.045em] text-foreground whitespace-nowrap"
           >
             Senthil Kumar
-            <span className="mt-1 block text-foreground/90 font-semibold">
+            <span className="mt-1 block text-foreground/90 font-semibold text-[2rem] md:text-[3rem] lg:text-[5rem] tracking-[0.05em]">
               THANGAVEL
             </span>
           </motion.h1>
 
           <motion.div
-            className="mt-10 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[0.95rem] leading-snug text-foreground-muted sm:text-base"
+            className="mt-10 flex items-center gap-x-2 gap-y-1.5 text-[0.95rem] leading-snug text-foreground-muted sm:text-base whitespace-nowrap justify-between w-full"
             variants={{
               hidden: { opacity: shouldReduceMotion ? 1 : 0, y: 14 },
               show: { opacity: 1, y: 0, transition: { duration: 0.7, ease } },
             }}
           >
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+            <div className="flex flex-wrap items-center gap-x-2 justify-start gap-y-1.5">
               <span className="font-semibold text-foreground">Founder of</span>
               <HoverLink
                 preview="peacock"
@@ -116,8 +116,8 @@ export const Hero = () => {
                 Peacock Studio
               </HoverLink>
             </div>
-            |
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+            <div className="hidden md:block">|</div>
+            <div className="flex flex-wrap items-center gap-x-2 justify-end md:justify-center gap-y-1.5">
               <span className="font-semibold text-foreground">
                 Chief Coordinator of
               </span>
@@ -127,11 +127,11 @@ export const Hero = () => {
                 showIcon={false}
               >
                 <Image
-                  src="/products/mentorbridge.png"
+                  src="/products/mentorbridge-sm.png"
                   alt=""
                   width={22}
                   height={22}
-                  className="h-[1.375rem] w-[1.375rem] shrink-0 object-contain"
+                  className="h-[1.375rem] w-[2rem] shrink-0 object-contain"
                 />
                 MentorBridge
               </HoverLink>
@@ -157,10 +157,10 @@ export const Hero = () => {
             className="mt-10 flex flex-wrap items-center gap-6"
           >
             <Link
-              href="/work"
+              href="/projects"
               className="inline-flex items-center rounded-full bg-foreground px-8 py-3.5 text-sm font-semibold text-background transition-transform hover:scale-[1.02] active:scale-[0.98]"
             >
-              View work
+              View projects
             </Link>
             <Link
               href="/contact"

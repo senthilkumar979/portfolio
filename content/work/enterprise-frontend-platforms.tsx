@@ -28,32 +28,37 @@ export const EnterpriseFrontendBody = () => (
     <ul>
       <li>Modular architecture patterns that cut technical debt and improved release velocity.</li>
       <li>Micro frontend boundaries so teams can ship independently.</li>
-      <li>Standardized tooling for performance, testing, and predictable sprints.</li>
+      <li>Standardized tooling for performance, testing, and predictable Agile sprints.</li>
       <li>
-        Modern state and data workflows — TanStack Query, Redux Toolkit, and
-        Jotai where each fits best.
+        Clear ownership of client state with Redux Toolkit where cross-cutting
+        orchestration is needed.
       </li>
     </ul>
 
-    <h2>Tools & preferences on these platforms</h2>
+    <h2>Tools on these platforms</h2>
     <ul>
       <li>
-        <strong>React + TypeScript + Next.js</strong> — type-safe UI at scale.
+        <strong>React + TypeScript</strong> — type-safe UI at enterprise scale.
       </li>
       <li>
-        <strong>Module Federation / MFEs</strong> — independent deployability.
+        <strong>Micro Frontends</strong> — independent deployability across
+        squads.
       </li>
       <li>
-        <strong>TanStack Query, Redux Toolkit, Jotai</strong> — clear ownership
-        of server vs client state.
+        <strong>Redux Toolkit</strong> — predictable shared store patterns when
+        domains need orchestration.
       </li>
       <li>
         <strong>Styled-Components / design systems</strong> — Figma-faithful UI
         across breakpoints.
       </li>
       <li>
-        <strong>Node.js, REST, AWS</strong> — full-stack delivery with cloud
-        readiness.
+        <strong>Node.js, Express, REST</strong> — pragmatic API layers close to
+        the frontend team’s mental model.
+      </li>
+      <li>
+        <strong>Agile / Scrum</strong> — structured delivery, reviews, and
+        workshops as part of how the platform ships.
       </li>
     </ul>
 

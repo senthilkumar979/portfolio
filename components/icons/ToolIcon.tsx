@@ -19,6 +19,14 @@ export type ToolIconId =
   | "axios"
   | "eslint"
   | "agile"
+  | "posthog"
+  | "supabase"
+  | "mongo"
+  | "upstash"
+  | "highcharts"
+  | "trigger"
+  | "monorepo"
+  | "styled"
   | "generic";
 
 interface ToolIconProps extends SVGProps<SVGSVGElement> {
@@ -161,6 +169,70 @@ export const ToolIcon = ({ id, className, ...rest }: ToolIconProps) => {
       return (
         <svg {...props} fill="none" stroke="currentColor" strokeWidth="1.6">
           <path d="M4 7h11l-2.5-2.5M15 7l-2.5 2.5M20 17H9l2.5 2.5M9 17l2.5-2.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+    case "posthog":
+      return (
+        <svg {...props}>
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.6" />
+          <circle cx="9.5" cy="11" r="2" />
+          <path d="M14.5 9.5c1.8.4 2.8 1.6 2.5 3.2-.3 1.5-1.8 2.4-3.5 2" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      );
+    case "supabase":
+      return (
+        <svg {...props}>
+          <path d="M12 2.5l7.5 13.2c.7 1.2-.2 2.8-1.6 2.8H6.1c-1.4 0-2.3-1.6-1.6-2.8L12 2.5z" />
+          <path d="M12 10.5v7.5" opacity=".35" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" />
+        </svg>
+      );
+    case "mongo":
+      return (
+        <svg {...props}>
+          <path d="M12 2c2.8 3.2 5.5 6.4 5.5 11.2 0 3.4-2.2 5.8-5.5 8.3-3.3-2.5-5.5-4.9-5.5-8.3C6.5 8.4 9.2 5.2 12 2z" />
+          <path d="M12 6.5v13" opacity=".35" stroke="currentColor" strokeWidth="1.6" fill="none" strokeLinecap="round" />
+        </svg>
+      );
+    case "upstash":
+      return (
+        <svg {...props} fill="none" stroke="currentColor" strokeWidth="1.6">
+          <path d="M5 15l7-11 7 11" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M8 15l4 5 4-5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+    case "highcharts":
+      return (
+        <svg {...props} fill="none" stroke="currentColor" strokeWidth="1.6">
+          <path d="M4 18V6M4 18h16" strokeLinecap="round" />
+          <path d="M7 14l3.5-4 3 2.5L17 7" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx="7" cy="14" r="1.2" fill="currentColor" stroke="none" />
+          <circle cx="10.5" cy="10" r="1.2" fill="currentColor" stroke="none" />
+          <circle cx="13.5" cy="12.5" r="1.2" fill="currentColor" stroke="none" />
+          <circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none" />
+        </svg>
+      );
+    case "trigger":
+      return (
+        <svg {...props} fill="none" stroke="currentColor" strokeWidth="1.6">
+          <path d="M13 3L5.5 13.5H12L11 21l7.5-10.5H12L13 3z" strokeLinejoin="round" />
+        </svg>
+      );
+    case "monorepo":
+      return (
+        <svg {...props} fill="none" stroke="currentColor" strokeWidth="1.6">
+          <rect x="3.5" y="4" width="7" height="7" rx="1.5" />
+          <rect x="13.5" y="4" width="7" height="7" rx="1.5" />
+          <rect x="8.5" y="13" width="7" height="7" rx="1.5" />
+          <path d="M7 11v2.5M17 11v2.5M12 11.5v1.5" strokeLinecap="round" />
+        </svg>
+      );
+    case "styled":
+      return (
+        <svg {...props} fill="none" stroke="currentColor" strokeWidth="1.6">
+          <path d="M8 5h11M5 12h14M8 19h11" strokeLinecap="round" />
+          <circle cx="5.5" cy="5" r="1.3" fill="currentColor" stroke="none" />
+          <circle cx="18.5" cy="12" r="1.3" fill="currentColor" stroke="none" />
+          <circle cx="5.5" cy="19" r="1.3" fill="currentColor" stroke="none" />
         </svg>
       );
     default:

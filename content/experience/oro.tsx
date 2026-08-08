@@ -15,7 +15,12 @@ export const OroBody = () => (
       </li>
       <li>
         Combined TanStack Query, Redux, and Jotai to streamline frontend state
-        and data workflows.
+        and data workflows — with Dexie.js / IndexedDB for client-side
+        persistence where it mattered.
+      </li>
+      <li>
+        Delivered on Vite and Next.js surfaces, including micro frontend
+        boundaries and dense data grids with TanStack Table.
       </li>
       <li>
         Integrated backend APIs with strict adherence to JSON:API
@@ -25,7 +30,8 @@ export const OroBody = () => (
 
     <h2>Stack</h2>
     <p>
-      React, TypeScript, Styled-Components, TanStack Query, Redux, Jotai, and
+      React, TypeScript, Next.js, Vite, Micro Frontends, Styled-Components,
+      TanStack Query, TanStack Table, Redux, Jotai, Dexie.js / IndexedDB, and
       JSON:API-shaped REST integrations.
     </p>
 

@@ -16,7 +16,15 @@ export const PeacockStudioBody = () => (
       Peacock Studio is an edge-native browser application — a Chrome/Edge
       extension paired with a React-based platform — that automates workflow
       documentation, visual testing, and interactive step-by-step process
-      playback.
+      playback. The extension is on the{" "}
+      <a
+        href="https://chromewebstore.google.com/detail/peacock-studio/abjglkkkjaoabboginagilnejoacnnnm"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Chrome Web Store
+      </a>
+      .
     </p>
     <p>
       Recording happens entirely on the client: high-frequency interactions, DOM

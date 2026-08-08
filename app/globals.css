@@ -33,7 +33,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-plex-sans), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   font-feature-settings: "kern" 1, "liga" 1;
   letter-spacing: -0.011em;
   width: 100%;

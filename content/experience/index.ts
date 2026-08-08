@@ -11,6 +11,8 @@ export interface ExperienceRole {
   location: string;
   period: string;
   url?: string;
+  logo: string;
+  logoClassName?: string;
   summary: string;
   stack: string[];
   Body: ComponentType;
@@ -24,16 +26,22 @@ export const experienceRoles: ExperienceRole[] = [
     location: "Brussels, Belgium",
     period: "Jul 2025 – Present",
     url: "https://www.bnpparibasfortis.be",
+    logo: "/companies/bnppf.png",
+    logoClassName: "h-10 w-16 object-contain",
     summary:
       "Frontend architecture and technical leadership for enterprise digital platforms — governance, mentorship, and scalable delivery.",
     stack: [
       "React",
       "TypeScript",
-      "Next.js",
-      "Micro Frontends",
+      "JavaScript",
       "Redux Toolkit",
       "Node.js",
-      "AWS",
+      "Express",
+      "REST APIs",
+      "Styled-Components",
+      "React Testing Library",
+      "Micro Frontends",
+      "Agile",
     ],
     Body: BnpBody,
   },
@@ -44,9 +52,18 @@ export const experienceRoles: ExperienceRole[] = [
     location: "Coimbatore, India",
     period: "Oct 2024 – Jun 2025",
     url: "https://www.ltimindtree.com",
+    logo: "/companies/ltim.png",
+    logoClassName: "h-10 w-14 object-contain",
     summary:
       "Led a cross-functional team of 8+ engineers delivering enterprise platforms with modular architecture and stronger release velocity.",
-    stack: ["React", "TypeScript", "Full-stack", "Agile"],
+    stack: [
+      "React",
+      "TypeScript",
+      "Material UI",
+      "Ag-Grid",
+      "Redux Toolkit",
+      "Micro Frontends",
+    ],
     Body: LtiBody,
   },
   {
@@ -56,15 +73,23 @@ export const experienceRoles: ExperienceRole[] = [
     location: "India",
     period: "Nov 2023 – Aug 2024",
     url: "https://oroinc.com",
+    logo: "/companies/oroinc.png",
+    logoClassName: "h-10 w-10 object-contain",
     summary:
       "Built a mobile-first React application and custom design system with modern data workflows against JSON:API backends.",
     stack: [
       "React",
       "TypeScript",
+      "Next.js",
+      "Vite",
+      "Micro Frontends",
       "Styled-Components",
       "TanStack Query",
+      "TanStack Table",
       "Redux",
       "Jotai",
+      "Dexie.js",
+      "IndexedDB",
     ],
     Body: OroBody,
   },
@@ -75,6 +100,8 @@ export const experienceRoles: ExperienceRole[] = [
     location: "Chennai, India",
     period: "Feb 2014 – Nov 2023",
     url: "https://www.tcs.com",
+    logo: "/companies/tcs.png",
+    logoClassName: "h-10 w-14 object-contain",
     summary:
       "Nearly a decade of full-stack delivery — modernizing legacy clients into React and building reliable services across the SDLC.",
     stack: [
