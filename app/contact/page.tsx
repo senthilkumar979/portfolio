@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ContactChannels } from "@/components/contact/ContactChannels";
 import { ContactElsewhere } from "@/components/contact/ContactElsewhere";
+import { ContactForm } from "@/components/contact/ContactForm";
 import { ContactHero } from "@/components/contact/ContactHero";
 import { ContactTopics } from "@/components/contact/ContactTopics";
 import { contactPage } from "@/content/contact";
@@ -20,6 +21,7 @@ export default function ContactPage() {
 
       <div className="relative mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
         <ContactHero />
+        <ContactForm />
         <ContactChannels />
         <ContactTopics />
         <ContactElsewhere />

@@ -16,6 +16,9 @@ export const Footer = () => (
         <Link href="/contact" className="hover:text-accent">
           Contact
         </Link>
+        <Link href="/feed.xml" className="hover:text-accent">
+          RSS
+        </Link>
         <HoverLink preview="linkedin" className="hover:text-accent">
           LinkedIn
         </HoverLink>

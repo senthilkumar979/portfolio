@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProjectCaseHeader } from "@/components/projects/ProjectCaseHeader";
+import { ProjectDecisionFramework } from "@/components/projects/ProjectDecisionFramework";
 import { ProjectGallery } from "@/components/projects/ProjectGallery";
-import { ProjectLivePreview } from "@/components/projects/ProjectLivePreview";
 import { TagList } from "@/components/TagList";
 import { getWorkBySlug, workProjects } from "@/content/work";
+import { projectFrameworks } from "@/content/work/frameworks";
 
 interface ProjectDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -75,6 +76,12 @@ export default async function ProjectDetailPage({
           title={project.title}
           screenshots={project.screenshots}
         />
+
+        {projectFrameworks[project.slug] ? (
+          <ProjectDecisionFramework
+            framework={projectFrameworks[project.slug]}
+          />
+        ) : null}
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_220px] lg:gap-16">
           <Body />

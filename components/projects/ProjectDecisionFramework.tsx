@@ -1,0 +1,91 @@
+import Link from "next/link";
+import type { ProjectFramework } from "@/content/work/frameworks";
+
+interface ProjectDecisionFrameworkProps {
+  framework: ProjectFramework;
+}
+
+export const ProjectDecisionFramework = ({
+  framework,
+}: ProjectDecisionFrameworkProps) => (
+  <section className="mt-12 border-t border-border pt-12">
+    <p className="text-[0.6875rem] font-medium uppercase tracking-[0.28em] text-accent">
+      How I decide
+    </p>
+    <h2 className="mt-4 max-w-3xl text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+      {framework.title}
+    </h2>
+    <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground-muted">
+      {framework.summary}
+    </p>
+
+    <div className="mt-10 grid gap-0 border-t border-border md:grid-cols-2">
+      <FrameworkSide side={framework.before} tone="muted" />
+      <FrameworkSide side={framework.after} tone="accent" />
+    </div>
+
+    <blockquote className="mt-10 max-w-3xl border-l-2 border-accent pl-5 text-lg leading-relaxed text-foreground">
+      {framework.call}
+    </blockquote>
+
+    <ul className="mt-10 border-t border-border">
+      {framework.criteria.map((item) => (
+        <li
+          key={item.label}
+          className="grid gap-2 border-b border-border py-5 md:grid-cols-[minmax(0,12rem)_minmax(0,1fr)] md:gap-8"
+        >
+          <p className="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-accent">
+            {item.label}
+          </p>
+          <p className="text-base leading-relaxed text-foreground-muted">
+            {item.body}
+          </p>
+        </li>
+      ))}
+    </ul>
+
+    {framework.relatedPost ? (
+      <Link
+        href={`/blog/${framework.relatedPost.slug}`}
+        className="mt-8 inline-flex text-sm font-medium text-accent transition-opacity hover:opacity-80"
+      >
+        {framework.relatedPost.label} →
+      </Link>
+    ) : null}
+  </section>
+);
+
+interface FrameworkSideProps {
+  side: ProjectFramework["before"];
+  tone: "muted" | "accent";
+}
+
+const FrameworkSide = ({ side, tone }: FrameworkSideProps) => (
+  <div
+    className={
+      tone === "accent"
+        ? "border-b border-border py-8 md:border-b-0 md:border-l md:pl-8 md:pr-0"
+        : "border-b border-border py-8 md:border-b-0 md:pr-8"
+    }
+  >
+    <p
+      className={
+        tone === "accent"
+          ? "text-[0.6875rem] font-medium uppercase tracking-[0.2em] text-accent"
+          : "text-[0.6875rem] font-medium uppercase tracking-[0.2em] text-foreground-muted"
+      }
+    >
+      {side.label}
+    </p>
+    <ul className="mt-5 space-y-3">
+      {side.items.map((item) => (
+        <li
+          key={item}
+          className="text-base leading-relaxed text-foreground-muted"
+        >
+          {item}
+        </li>
+      ))}
+    </ul>
+  </div>
+);

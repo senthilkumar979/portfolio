@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { BlogClosing } from "@/components/blog/BlogClosing";
+import { BlogFilters } from "@/components/blog/BlogFilters";
 import { BlogHero } from "@/components/blog/BlogHero";
 import { BlogPostList } from "@/components/blog/BlogPostList";
 import { blogPage } from "@/content/blog";
@@ -19,7 +21,12 @@ export default function BlogPage() {
 
       <div className="relative mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
         <BlogHero />
-        <BlogPostList />
+        <Suspense fallback={null}>
+          <BlogFilters />
+        </Suspense>
+        <Suspense fallback={null}>
+          <BlogPostList />
+        </Suspense>
         <BlogClosing />
       </div>
     </div>

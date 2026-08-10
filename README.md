@@ -1,6 +1,6 @@
 # Senthil Kumar Thangavel — Portfolio
 
-Multi-page portfolio for [senthilkumar.life](https://senthilkumar.life).
+Multi-page portfolio for [senthilkumar.mentorbridge.in](https://senthilkumar.mentorbridge.in).
 
 ## Stack
 

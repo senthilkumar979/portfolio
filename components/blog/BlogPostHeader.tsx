@@ -4,12 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { externalAnchorProps } from "@/lib/links";
-import { formatBlogDate } from "@/content/blog";
+import { formatBlogDate, type BlogTopic } from "@/content/blog";
 
 interface BlogPostHeaderProps {
   title: string;
   date: string;
-  tags: readonly string[];
+  topics: readonly BlogTopic[];
   excerpt: string;
   cover: string;
   coverAlt: string;
@@ -19,7 +19,7 @@ interface BlogPostHeaderProps {
 export const BlogPostHeader = ({
   title,
   date,
-  tags,
+  topics,
   excerpt,
   cover,
   coverAlt,
@@ -62,7 +62,17 @@ export const BlogPostHeader = ({
           <span aria-hidden className="text-border">
             ·
           </span>
-          <span>{tags.join(" · ")}</span>
+          <span className="flex flex-wrap gap-x-3 gap-y-1">
+            {topics.map((topic) => (
+              <Link
+                key={topic}
+                href={`/blog?topic=${encodeURIComponent(topic)}`}
+                className="transition-colors hover:text-accent"
+              >
+                {topic}
+              </Link>
+            ))}
+          </span>
         </div>
 
         <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3">

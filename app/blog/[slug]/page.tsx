@@ -4,11 +4,13 @@ import { notFound } from "next/navigation";
 import { BlogPostClosing } from "@/components/blog/BlogPostClosing";
 import { BlogPostHeader } from "@/components/blog/BlogPostHeader";
 import { BlogPostNav } from "@/components/blog/BlogPostNav";
+import { JsonLd } from "@/components/JsonLd";
 import {
   blogPosts,
   getAdjacentBlogPosts,
   getBlogBySlug,
 } from "@/content/blog";
+import { blogPostingJsonLd } from "@/lib/jsonLd";
 
 interface BlogDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -43,9 +45,11 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 
   const { Body } = post;
   const { previous, next } = getAdjacentBlogPosts(slug);
+  const jsonLd = blogPostingJsonLd(slug);
 
   return (
     <div className="relative">
+      {jsonLd ? <JsonLd data={jsonLd} /> : null}
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_50%_35%_at_100%_0%,rgba(0,194,168,0.09),transparent_55%)]"
         aria-hidden
@@ -62,7 +66,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         <BlogPostHeader
           title={post.title}
           date={post.date}
-          tags={post.tags}
+          topics={post.topics}
           excerpt={post.excerpt}
           cover={post.cover}
           coverAlt={post.coverAlt}

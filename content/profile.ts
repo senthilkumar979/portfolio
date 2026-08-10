@@ -8,7 +8,7 @@ export const profile = {
   headline: "Principal Frontend Developer building scalable platforms, standards, and the people who ship them.",
   tagline:
     "Engineering leader with 12+ years designing enterprise digital platforms, reusable foundations, and mentoring the next generation of engineers.",
-  domain: "https://senthilkumar.life",
+  domain: "https://senthilkumar.mentorbridge.in",
   resumePath: "/hero/resume.pdf",
   images: {
     hero: "/hero/hero.png",

@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import { EnterpriseFrontendBody } from "./enterprise-frontend-platforms";
 import { PeacockStudioBody } from "./peacock-studio";
 import { SecuroSphereBody } from "./securosphere";
 import { StubLabBody } from "./stublab";
@@ -14,7 +15,7 @@ export interface WorkProject {
   title: string;
   subtitle: string;
   summary: string;
-  url: string;
+  url?: string;
   chromeStoreUrl?: string;
   logo: string;
   logoClassName?: string;
@@ -60,6 +61,29 @@ export const workProjects: WorkProject[] = [
       },
     ],
     Body: PeacockStudioBody,
+  },
+  {
+    slug: "enterprise-frontend-platforms",
+    title: "Enterprise frontend platforms",
+    subtitle: "Architecture, standards, and squad delivery at scale",
+    summary:
+      "Frontend architecture and technical leadership for large multi-squad digital platforms — governance, micro frontends, and reusable foundations that raise quality without slowing delivery.",
+    logo: "/companies/bnppf.png",
+    logoClassName: "h-12 w-12 object-contain",
+    year: "2024–Present",
+    role: "Principal Developer",
+    tags: ["Enterprise", "Architecture", "Micro Frontends"],
+    tools: [
+      "React",
+      "TypeScript",
+      "Micro Frontends",
+      "Redux Toolkit",
+      "Node.js",
+      "Design systems",
+      "Agile",
+    ],
+    screenshots: [],
+    Body: EnterpriseFrontendBody,
   },
   {
     slug: "securosphere",

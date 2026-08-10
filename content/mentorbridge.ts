@@ -102,6 +102,72 @@ export const mentorbridgeOutcomes = [
   },
 ] as const;
 
+export const mentorbridgeProof = {
+  eyebrow: "Proof",
+  title: "Outcomes you can verify",
+  description:
+    "Placement stories, hiring partners, and the podcast that trains professional communication — the evidence behind the numbers.",
+} as const;
+
+export const mentorbridgeStories = [
+  {
+    name: "Mentee · Full-stack",
+    outcome: "Junior engineer · Product SaaS",
+    body: "Joined with strong academics but no production habits. After portfolio reviews and mock interviews, landed a full-stack role building React features under sprint pressure.",
+  },
+  {
+    name: "Mentee · Rural campus",
+    outcome: "Frontend engineer · Startup",
+    body: "Came in shy on English interviews. Podcast practice plus system-design coaching turned communication into a strength — hired as a frontend engineer within one hiring cycle.",
+  },
+  {
+    name: "Mentee · Career switch",
+    outcome: "Associate engineer · Services firm",
+    body: "Pivoted from a non-CS background. Structured JavaScript/React path, code reviews, and partner intros opened a first engineering seat with mentorship on the job.",
+  },
+] as const;
+
+export const mentorbridgePartners = [
+  {
+    name: "SSMIET IIC",
+    kind: "Academic partner",
+    body: "Campus innovation collaboration — including product work like StubLab that puts mentees on real tooling problems.",
+  },
+  {
+    name: "Startup & SaaS teams",
+    kind: "Hiring partners",
+    body: "Direct talent pipelines into product companies that need production-minded juniors — not résumé filters alone.",
+  },
+  {
+    name: "Services & product firms",
+    kind: "Hiring partners",
+    body: "Partners who interview MentorBridge graduates for frontend and full-stack seats after portfolio and communication screens.",
+  },
+] as const;
+
+export const mentorbridgePodcast = {
+  eyebrow: "Podcast",
+  title: "Mentor Bridge Student Interview Podcast",
+  description:
+    "Each episode puts a mentee in the guest chair for a full-length interview conducted entirely in English — practice that mirrors real hiring conversations.",
+  href: "/blog/mentor-bridge-podcast",
+  cta: "Read the podcast story",
+  episodes: [
+    {
+      title: "Student interview series",
+      note: "Personalized interviews on journeys, projects, and aspirations — confidence under live conversation pressure.",
+    },
+    {
+      title: "Professional English in practice",
+      note: "Spontaneous dialogue, not memorized scripts — the same skill set used in client meetings and global squads.",
+    },
+    {
+      title: "From campus voice to industry presence",
+      note: "Especially for rural talent: a structured stage to articulate expertise before the job interview does.",
+    },
+  ],
+} as const;
+
 export const mentorbridgeClosing = {
   title: "Looking for engineers who are already production-minded?",
   body: "Partner with MentorBridge for hiring pipelines, workshops, or mentorship collaboration — or reach out if you want to grow under industry standards.",

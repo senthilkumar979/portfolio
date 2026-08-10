@@ -12,10 +12,20 @@ import { StorytellingPracticePost } from "./posts/StorytellingPractice";
 import { TransparentLeadershipPost } from "./posts/TransparentLeadership";
 import { UnleashingConfidencePost } from "./posts/UnleashingConfidence";
 
+export const blogTopics = [
+  "Leadership",
+  "Engineering",
+  "MentorBridge",
+  "Communication",
+] as const;
+
+export type BlogTopic = (typeof blogTopics)[number];
+
 export interface BlogPost {
   slug: string;
   title: string;
   date: string;
+  topics: BlogTopic[];
   tags: string[];
   excerpt: string;
   cover: string;
@@ -38,6 +48,7 @@ export const blogPosts: BlogPost[] = [
     title:
       "Building Bridges, One Conversation at a Time: Introducing the Mentor Bridge Podcast",
     date: "2025-10-26",
+    topics: ["MentorBridge", "Communication"],
     tags: ["MentorBridge", "Communication", "Podcast"],
     excerpt:
       "How MentorBridge uses student interview podcasts to build fluent professional English communication — not just technical skill.",
@@ -52,6 +63,7 @@ export const blogPosts: BlogPost[] = [
     slug: "storytelling-practice",
     title: "Why Storytelling Practice Matters in Communication",
     date: "2025-08-17",
+    topics: ["Communication", "MentorBridge"],
     tags: ["Communication", "Storytelling", "Mentorship"],
     excerpt:
       "Storytelling is not optional soft skill fluff — it is how engineers make complex ideas land in emails, pitches, and classrooms.",
@@ -65,6 +77,7 @@ export const blogPosts: BlogPost[] = [
     slug: "inspirations-controversial",
     title: "What I Learned from My Inspirations Even the Controversial Ones",
     date: "2025-07-24",
+    topics: ["Leadership"],
     tags: ["Leadership", "Inspiration", "Growth"],
     excerpt:
       "I don’t look for perfect people — I look for powerful qualities. Lessons on discipline, persistence, resilience, vision, and service.",
@@ -79,6 +92,7 @@ export const blogPosts: BlogPost[] = [
     slug: "refactor-or-rewrite",
     title: "Refactor or Rewrite? How I Chose the Right Path in a Real-World Project",
     date: "2025-06-03",
+    topics: ["Engineering"],
     tags: ["Engineering", "Legacy", "Architecture"],
     excerpt:
       "A structured decision framework — and a small rewrite spike — that led to refactor first, rewrite later on an 8-year-old React app.",
@@ -93,6 +107,7 @@ export const blogPosts: BlogPost[] = [
     slug: "standing-out-in-a-team",
     title: "Standing Out in a Team: A Guide to Excel",
     date: "2024-09-26",
+    topics: ["Leadership"],
     tags: ["Leadership", "Team", "Workplace"],
     excerpt:
       "Dedication, curiosity, and going the extra mile — a practical flow for becoming a key asset on any engineering team.",
@@ -107,6 +122,7 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-delegate-effectively",
     title: "How to Delegate Effectively",
     date: "2023-08-21",
+    topics: ["Leadership"],
     tags: ["Leadership", "Team", "Productivity"],
     excerpt:
       "Delegation isn’t offloading work — it’s leveraging team strengths, setting clear expectations, and freeing developers to focus on what matters most.",
@@ -121,6 +137,7 @@ export const blogPosts: BlogPost[] = [
     slug: "unleashing-confidence",
     title: "Unleashing Confidence Through Action, Even When Scared",
     date: "2023-07-18",
+    topics: ["Leadership", "Communication"],
     tags: ["Confidence", "Growth", "Mindset"],
     excerpt:
       "You will never feel completely ready — confidence is a byproduct of action. Embrace the fear and do it scared.",
@@ -135,6 +152,7 @@ export const blogPosts: BlogPost[] = [
     slug: "power-of-team-events",
     title: "The Power of Team Events: Uniting and Inspiring Success",
     date: "2023-06-30",
+    topics: ["Leadership"],
     tags: ["Team Building", "Collaboration", "Teamwork"],
     excerpt:
       "Retreats, cook-offs, and hackathons — how team events strengthen bonds, boost morale, and unlock collaboration.",
@@ -150,6 +168,7 @@ export const blogPosts: BlogPost[] = [
     title:
       "Stealthy Strategies: Ascending the Corporate Job Ladder with Minimal Disruption",
     date: "2023-06-27",
+    topics: ["Leadership"],
     tags: ["Career", "Leadership", "Growth"],
     excerpt:
       "Low-profile tactics for climbing the ladder — clear goals, quiet excellence, mentorship, and tactful ambition.",
@@ -164,6 +183,7 @@ export const blogPosts: BlogPost[] = [
     title:
       "Unlocking Success: Persuading Clients to Embrace Migration of an Application having Technical Debt and an Outdated Tech Stack",
     date: "2023-06-25",
+    topics: ["Engineering"],
     tags: ["Migration", "Technical Debt", "Consulting"],
     excerpt:
       "A ten-step playbook for selling modernization — pain points, business case, phased delivery, and proof-of-concept momentum.",
@@ -177,6 +197,7 @@ export const blogPosts: BlogPost[] = [
     title:
       "The Power of Transparent Leadership: Inspiring Trust and Uniting Teams",
     date: "2023-06-20",
+    topics: ["Leadership"],
     tags: ["Leadership", "Transparency", "Culture"],
     excerpt:
       "Why transparency builds trust — with lessons from Nadella, Barra, and Pichai, plus practical habits for likable leaders.",
@@ -191,6 +212,7 @@ export const blogPosts: BlogPost[] = [
     slug: "migrating-to-react",
     title: "The Necessity of Migrating Legacy Applications to React JS",
     date: "2023-06-20",
+    topics: ["Engineering"],
     tags: ["React", "Migration", "Legacy"],
     excerpt:
       "Why teams move off AngularJS and Backbone — better DX, performance, scalability, ecosystem, and long-term viability with React.",
@@ -205,6 +227,19 @@ export const blogPosts: BlogPost[] = [
 
 export function getBlogBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((post) => post.slug === slug);
+}
+
+export function isBlogTopic(value: string | null | undefined): value is BlogTopic {
+  return !!value && (blogTopics as readonly string[]).includes(value);
+}
+
+export function filterBlogPosts(topic?: BlogTopic | null): BlogPost[] {
+  if (!topic) return blogPosts;
+  return blogPosts.filter((post) => post.topics.includes(topic));
+}
+
+export function countPostsByTopic(topic: BlogTopic): number {
+  return blogPosts.filter((post) => post.topics.includes(topic)).length;
 }
 
 export function getAdjacentBlogPosts(slug: string): {

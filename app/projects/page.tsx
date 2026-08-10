@@ -21,7 +21,7 @@ export default function ProjectsPage() {
         <PageHeader
           eyebrow="Projects"
           title="Case studies"
-          description="Products I founded or mentored into production, plus enterprise platforms I architected — each with a write-up and a live link."
+          description="Products I founded or mentored into production, plus enterprise platforms I architected — each with a write-up."
         />
 
         <div className="mt-6 border-t border-border">

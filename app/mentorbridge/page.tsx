@@ -3,10 +3,15 @@ import { MentorBridgeClosing } from "@/components/mentorbridge/MentorBridgeClosi
 import { MentorBridgeHero } from "@/components/mentorbridge/MentorBridgeHero";
 import { MentorBridgeLeadership } from "@/components/mentorbridge/MentorBridgeLeadership";
 import { MentorBridgeMission } from "@/components/mentorbridge/MentorBridgeMission";
+import { MentorBridgePartners } from "@/components/mentorbridge/MentorBridgePartners";
 import { MentorBridgePath } from "@/components/mentorbridge/MentorBridgePath";
+import { MentorBridgePodcast } from "@/components/mentorbridge/MentorBridgePodcast";
 import { MentorBridgePractice } from "@/components/mentorbridge/MentorBridgePractice";
+import { MentorBridgeProof } from "@/components/mentorbridge/MentorBridgeProof";
 import { MentorBridgeStats } from "@/components/mentorbridge/MentorBridgeStats";
+import { JsonLd } from "@/components/JsonLd";
 import { mentorbridge } from "@/content/mentorbridge";
+import { mentorbridgeJsonLd } from "@/lib/jsonLd";
 
 export const metadata: Metadata = {
   title: "MentorBridge",
@@ -16,6 +21,7 @@ export const metadata: Metadata = {
 export default function MentorBridgePage() {
   return (
     <div className="relative">
+      <JsonLd data={mentorbridgeJsonLd()} />
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_40%_at_0%_0%,rgba(0,194,168,0.1),transparent_50%),radial-gradient(ellipse_40%_30%_at_100%_10%,rgba(0,194,168,0.06),transparent_55%)]"
         aria-hidden
@@ -28,6 +34,9 @@ export default function MentorBridgePage() {
         <MentorBridgeLeadership />
         <MentorBridgePath />
         <MentorBridgePractice />
+        <MentorBridgeProof />
+        <MentorBridgePartners />
+        <MentorBridgePodcast />
         <MentorBridgeClosing />
       </div>
     </div>

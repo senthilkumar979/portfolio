@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ExperienceCaseHeader } from "@/components/experience/ExperienceCaseHeader";
 import { TenureChart } from "@/components/experience/TenureChart";
 import { TagList } from "@/components/TagList";
+import { Testimonials } from "@/components/Testimonials";
 import { experienceRoles, getExperienceBySlug } from "@/content/experience";
 
 interface ExperienceDetailPageProps {
@@ -79,6 +80,8 @@ export default async function ExperienceDetailPage({
             <TagList title="Stack" items={role.stack} />
           </aside>
         </div>
+
+        <Testimonials surface="experience" experienceSlug={role.slug} />
 
         <nav
           aria-label="Adjacent roles"

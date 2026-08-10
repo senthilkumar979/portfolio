@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 import { Footer } from "@/components/Footer";
+import { JsonLd } from "@/components/JsonLd";
 import { Nav } from "@/components/Nav";
 import { profile } from "@/content/profile";
+import { personJsonLd, websiteJsonLd } from "@/lib/jsonLd";
 import "./globals.css";
 
 const plexSans = IBM_Plex_Sans({
@@ -38,12 +40,18 @@ export const metadata: Metadata = {
     description: profile.tagline,
     images: [profile.images.portrait],
   },
+  alternates: {
+    types: {
+      "application/rss+xml": `${profile.domain}/feed.xml`,
+    },
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${plexSans.variable} h-full antialiased`}>
       <body className="flex w-full max-w-full min-h-full flex-col bg-background font-sans text-foreground">
+        <JsonLd data={[personJsonLd(), websiteJsonLd()]} />
         <Nav />
         <main id="main" className="w-full min-w-0 max-w-full flex-1">
           {children}

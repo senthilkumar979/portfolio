@@ -12,7 +12,7 @@ interface ProjectCardProps {
   year: string;
   logo: string;
   logoClassName?: string;
-  url: string;
+  url?: string;
   caseStudyHref: string;
 }
 
@@ -81,13 +81,15 @@ export const ProjectCard = ({
           >
             Case study →
           </Link>
-          <a
-            href={url}
-            {...externalAnchorProps(url, true)}
-            className="text-sm font-medium text-foreground-muted transition-colors hover:text-accent"
-          >
-            Visit site →
-          </a>
+          {url ? (
+            <a
+              href={url}
+              {...externalAnchorProps(url, true)}
+              className="text-sm font-medium text-foreground-muted transition-colors hover:text-accent"
+            >
+              Visit site →
+            </a>
+          ) : null}
         </div>
       </div>
 
