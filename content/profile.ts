@@ -10,9 +10,10 @@ export const profile = {
     "Engineering leader with 12+ years designing enterprise digital platforms, reusable foundations, and mentoring the next generation of engineers.",
   domain: "https://senthilkumar.mentorbridge.in",
   resumePath: "/hero/resume.pdf",
+  resumeFileName: "Senthil Kumar Resume - Frontend - React.pdf",
   images: {
     hero: "/hero/hero.png",
-    portrait: "/hero/prof.png",
+    portrait: "/hero/straight.jpg",
   },
   socials: {
     linkedin: "https://www.linkedin.com/in/senthilk979",

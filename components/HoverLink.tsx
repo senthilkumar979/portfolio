@@ -26,8 +26,9 @@ interface HoverLinkProps {
   iconClassName?: string;
 }
 
-function isNativeAnchor(href: string, external?: boolean) {
+function isNativeAnchor(href: string, external?: boolean, download?: string) {
   return (
+    Boolean(download) ||
     isExternalHref(href, Boolean(external)) ||
     href.startsWith("mailto:") ||
     href.startsWith("tel:")
@@ -51,7 +52,11 @@ export const HoverLink = ({
   const [preferAbove, setPreferAbove] = useState(false);
   const shouldShowIcon = showIcon ?? Boolean(preview.icon);
   const isExternal = isExternalHref(preview.href, Boolean(preview.external));
-  const useAnchor = isNativeAnchor(preview.href, preview.external);
+  const useAnchor = isNativeAnchor(
+    preview.href,
+    preview.external,
+    preview.download,
+  );
 
   const clearTimers = useCallback(() => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -109,7 +114,9 @@ export const HoverLink = ({
     onBlur: close,
     onMouseEnter: open,
     onMouseLeave: close,
-    ...externalAnchorProps(preview.href, Boolean(preview.external)),
+    ...(preview.download
+      ? { download: preview.download }
+      : externalAnchorProps(preview.href, Boolean(preview.external))),
   };
 
   return (

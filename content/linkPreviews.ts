@@ -16,6 +16,7 @@ export interface LinkPreview {
   logo?: string;
   icon?: LinkPreviewIcon;
   external?: boolean;
+  download?: string;
 }
 
 export const linkPreviews = {
@@ -77,7 +78,7 @@ export const linkPreviews = {
       "PDF resume — roles, ventures, and the stack behind enterprise delivery.",
     meta: "Download PDF",
     icon: "resume",
-    external: true,
+    download: profile.resumeFileName,
   },
   email: {
     id: "email",

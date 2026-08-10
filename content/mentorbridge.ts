@@ -111,19 +111,22 @@ export const mentorbridgeProof = {
 
 export const mentorbridgeStories = [
   {
-    name: "Mentee · Full-stack",
-    outcome: "Junior engineer · Product SaaS",
-    body: "Joined with strong academics but no production habits. After portfolio reviews and mock interviews, landed a full-stack role building React features under sprint pressure.",
+    name: "Umar Farooq",
+    outcome: "Full-stack engineer · Teksage",
+    linkedIn: "https://www.linkedin.com/in/umar-farook-j/",
+    body: "Joined with strong academics and a thirst for learning; guided and mentored to develop both technical and soft skills, ultimately landed a full-stack role building React features under sprint pressure.",
   },
   {
-    name: "Mentee · Rural campus",
-    outcome: "Frontend engineer · Startup",
-    body: "Came in shy on English interviews. Podcast practice plus system-design coaching turned communication into a strength — hired as a frontend engineer within one hiring cycle.",
-  },
-  {
-    name: "Mentee · Career switch",
-    outcome: "Associate engineer · Services firm",
+    name: "Subash Natrayan",
+    linkedIn: "https://www.linkedin.com/in/subash-natrayan-r-m-4654aa319/",
+    outcome: "Full-stack engineer · Frigate",
     body: "Pivoted from a non-CS background. Structured JavaScript/React path, code reviews, and partner intros opened a first engineering seat with mentorship on the job.",
+  },
+  {
+    name: "Sakthi Hariharan",
+    outcome: "Chief of Staff · Codifi",
+    linkedIn: "https://www.linkedin.com/in/sakthi-hariharan-vidyasagar-806bb4324/",
+    body: "Had no idea how IT works before joining MentorBridge. Selected to train closely and worked directly in the founder’s office, gaining hands-on experience — now thriving in a fintech role.",
   },
 ] as const;
 

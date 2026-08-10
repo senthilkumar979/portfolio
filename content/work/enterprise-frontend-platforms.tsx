@@ -2,9 +2,9 @@ export const EnterpriseFrontendBody = () => (
   <div className="prose-portfolio">
     <h2>Context</h2>
     <p>
-      Across banking and enterprise digital platforms, frontend systems must stay
-      highly available, secure, and deliverable by multiple squads — without
-      collapsing into a single fragile monolith.
+      Across banking and enterprise digital platforms, frontend systems must
+      stay highly available, secure, and deliverable by multiple squads —
+      without collapsing into a single fragile monolith.
     </p>
     <p>
       This write-up stays intentionally high-level. No confidential systems,
@@ -26,12 +26,18 @@ export const EnterpriseFrontendBody = () => (
 
     <h2>Approach</h2>
     <ul>
-      <li>Modular architecture patterns that cut technical debt and improved release velocity.</li>
-      <li>Micro frontend boundaries so teams can ship independently.</li>
-      <li>Standardized tooling for performance, testing, and predictable Agile sprints.</li>
       <li>
-        Clear ownership of client state with Redux Toolkit where cross-cutting
-        orchestration is needed.
+        Modular architecture patterns that cut technical debt and improved
+        release velocity.
+      </li>
+      <li>Micro frontend boundaries so teams can ship independently.</li>
+      <li>
+        Standardized tooling for performance, testing, and predictable Agile
+        sprints.
+      </li>
+      <li>
+        Ensured clear management of client-side state using Tanstack Query for
+        scenarios requiring cross-team orchestration.
       </li>
     </ul>
 
@@ -45,12 +51,8 @@ export const EnterpriseFrontendBody = () => (
         squads.
       </li>
       <li>
-        <strong>Redux Toolkit</strong> — predictable shared store patterns when
-        domains need orchestration.
-      </li>
-      <li>
-        <strong>Styled-Components / design systems</strong> — Figma-faithful UI
-        across breakpoints.
+        <strong>Tanstack Query</strong> — API client state management for
+        cross-team orchestration.
       </li>
       <li>
         <strong>Node.js, Express, REST</strong> — pragmatic API layers close to
@@ -65,8 +67,8 @@ export const EnterpriseFrontendBody = () => (
     <h2>Impact</h2>
     <p>
       Reusable engineering foundations, stronger team standards, and platforms
-      that are easier to extend — measured in fewer defects, faster releases, and
-      healthier developer workflows.
+      that are easier to extend — measured in fewer defects, faster releases,
+      and healthier developer workflows.
     </p>
   </div>
 );

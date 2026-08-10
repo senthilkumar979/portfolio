@@ -77,7 +77,7 @@ export const workProjects: WorkProject[] = [
       "React",
       "TypeScript",
       "Micro Frontends",
-      "Redux Toolkit",
+      "Tanstack Query",
       "Node.js",
       "Design systems",
       "Agile",

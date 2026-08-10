@@ -2,7 +2,6 @@ import Link from "next/link";
 import { impactMetrics, positioningLine } from "@/content/home";
 import { profile } from "@/content/profile";
 import Image from "next/image";
-import { externalAnchorProps } from "@/lib/links";
 
 export const ImpactStrip = () => (
   <section className="border-t border-border">
@@ -41,10 +40,10 @@ export const ImpactStrip = () => (
       <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
         <a
           href={profile.resumePath}
-          {...externalAnchorProps(profile.resumePath)}
+          download={profile.resumeFileName}
           className="text-sm font-medium text-accent transition-opacity hover:opacity-80"
         >
-          View resume
+          Download resume
         </a>
         <Link
           href="/contact"
