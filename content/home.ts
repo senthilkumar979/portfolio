@@ -81,6 +81,18 @@ export const featuredWork = [
     logoClassName: "h-15 w-15",
   },
   {
+    slug: "usethishook",
+    href: "/projects/usethishook",
+    name: "useThisHook",
+    logo: "/products/usethishook.svg",
+    role: "Author",
+    title: "Typed React hooks you can drop into any app",
+    result:
+      "32 named, tree-shakeable hooks with zero runtime dependencies — published on npm for Vite, Next.js, and Module Federation hosts.",
+    stack: ["React", "TypeScript", "Vitest", "tsup", "Vite"],
+    logoClassName: "h-14 w-14",
+  },
+  {
     slug: "enterprise-frontend-platforms",
     href: "/projects/enterprise-frontend-platforms",
     name: "Enterprise platforms",

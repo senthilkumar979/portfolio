@@ -68,8 +68,8 @@ export default async function ProjectDetailPage({
           url={project.url}
           logo={project.logo}
           logoClassName={project.logoClassName}
-          secondaryUrl={project.chromeStoreUrl}
-          secondaryLabel="Chrome Web Store"
+          secondaryUrl={project.secondaryUrl}
+          secondaryLabel={project.secondaryLabel}
         />
 
         <ProjectGallery

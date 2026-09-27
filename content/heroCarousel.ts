@@ -59,6 +59,17 @@ export const heroCarouselItems: HeroCarouselItem[] = [
     external: true,
   },
   {
+    id: "usethishook",
+    name: "useThisHook",
+    kind: "Personal",
+    role: "Author",
+    description:
+      "Typed React hooks you can drop into any app — zero runtime dependencies, generated types, and live docs.",
+    href: profile.socials.usethishook,
+    logo: "/products/usethishook.svg",
+    external: true,
+  },
+  {
     id: "mentorbridge",
     name: "MentorBridge",
     kind: "Personal",

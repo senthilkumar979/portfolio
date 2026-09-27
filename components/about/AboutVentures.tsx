@@ -9,21 +9,23 @@ export const AboutVentures = () => (
       Ventures
     </p>
     <h2 className="mt-4 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-      Products & mentorship
+      Products, open source & mentorship
     </h2>
     <ul className="mt-10 border-t border-border">
       {aboutVentures.map((venture) => (
         <li
           key={venture.name}
-          className="grid gap-5 border-b border-border py-8 sm:grid-cols-[auto_minmax(0,1fr)] sm:items-start sm:gap-8"
+          className="grid gap-5 border-b border-border py-8 sm:grid-cols-[6rem_minmax(0,1fr)] sm:items-start sm:gap-8"
         >
-          <Image
-            src={venture.logo}
-            alt=""
-            width={120}
-            height={48}
-            className={venture.logoClassName}
-          />
+          <span className="flex h-15 w-24 shrink-0 items-center justify-center">
+            <Image
+              src={venture.logo}
+              alt=""
+              width={120}
+              height={60}
+              className={venture.logoClassName}
+            />
+          </span>
           <div>
             <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
               <HoverLink

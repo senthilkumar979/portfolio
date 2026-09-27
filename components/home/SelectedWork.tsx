@@ -19,8 +19,8 @@ export const SelectedWork = () => (
             Cases that show how I build
           </h2>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-foreground-muted">
-            Product, platform architecture, and a mentorship pipeline — three
-            threads from the same craft.
+            Product, open source, platform architecture, and a mentorship
+            pipeline — threads from the same craft.
           </p>
         </div>
 

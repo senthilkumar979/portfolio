@@ -4,6 +4,7 @@ import { PeacockStudioBody } from "./peacock-studio";
 import { SecuroSphereBody } from "./securosphere";
 import { StubLabBody } from "./stublab";
 import { StuProBody } from "./stupro";
+import { UseThisHookBody } from "./usethishook";
 
 export interface ProjectScreenshot {
   src: string;
@@ -16,7 +17,8 @@ export interface WorkProject {
   subtitle: string;
   summary: string;
   url?: string;
-  chromeStoreUrl?: string;
+  secondaryUrl?: string;
+  secondaryLabel?: string;
   logo: string;
   logoClassName?: string;
   year: string;
@@ -35,8 +37,9 @@ export const workProjects: WorkProject[] = [
     summary:
       "A privacy-first browser application that automates workflow documentation, visual testing, and interactive process playback for engineering and QA teams.",
     url: "https://peacockstudio.app?ref=peacock-studio&embed=true",
-    chromeStoreUrl:
+    secondaryUrl:
       "https://chromewebstore.google.com/detail/peacock-studio/abjglkkkjaoabboginagilnejoacnnnm",
+    secondaryLabel: "Chrome Web Store",
     logo: "/products/peacock.png",
     logoClassName: "h-12 w-12 object-contain",
     year: "2026–Present",
@@ -61,6 +64,33 @@ export const workProjects: WorkProject[] = [
       },
     ],
     Body: PeacockStudioBody,
+  },
+  {
+    slug: "usethishook",
+    title: "useThisHook",
+    subtitle: "Typed React hooks you can drop into any app",
+    summary:
+      "An open-source library of 32 named, tree-shakeable React hooks — zero runtime dependencies, generated TypeScript types, and SSR-aware browser APIs.",
+    url: "https://usethishook.mentorbridge.in/",
+    secondaryUrl: "https://github.com/senthilkumar979/useThisHook",
+    secondaryLabel: "GitHub",
+    logo: "/products/usethishook.svg",
+    logoClassName: "h-12 w-12 object-contain",
+    year: "2026–Present",
+    role: "Author",
+    tags: ["Open Source", "React", "Developer Tools"],
+    tools: ["React", "TypeScript", "Vitest", "tsup", "Vite"],
+    screenshots: [
+      {
+        src: "/projects/usethishook/01-home.jpg",
+        alt: "useThisHook docs — typed hooks with live previews and API reference",
+      },
+      {
+        src: "/projects/usethishook/02-confirm.jpg",
+        alt: "useConfirm — await a yes/no dialog from a click handler",
+      },
+    ],
+    Body: UseThisHookBody,
   },
   {
     slug: "enterprise-frontend-platforms",

@@ -23,12 +23,13 @@ export const profile = {
     peacockChromeStore:
       "https://chromewebstore.google.com/detail/peacock-studio/abjglkkkjaoabboginagilnejoacnnnm",
     mentorbridge: "https://www.mentorbridge.in",
+    usethishook: "https://usethishook.mentorbridge.in/",
     bnp: "https://www.bnpparibasfortis.be",
   },
   about: [
     "I am a Principal Frontend Developer at BNP Paribas Fortis in Brussels, focused on scalable enterprise platforms, clean architecture, and developer experience across squads.",
     "I establish reusable engineering foundations — UI platforms, development standards, and architecture patterns — that improve productivity and software quality. Mentorship is part of how I deliver: design reviews, workshops, and coaching that raise the floor for the whole team.",
-    "I founded Peacock Studio, a privacy-first developer productivity platform, and MentorBridge, a mentorship initiative that trains aspiring engineers and builds hiring pipelines into full-time roles — with a particular focus on students from rural backgrounds.",
+    "I founded Peacock Studio, a privacy-first developer productivity platform, and MentorBridge, a mentorship initiative that trains aspiring engineers and builds hiring pipelines into full-time roles — with a particular focus on students from rural backgrounds. I also publish useThisHook, a typed open-source React hooks library.",
   ],
   education: [
     {

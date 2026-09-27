@@ -188,6 +188,10 @@ body {
   animation: hero-marquee 45s linear infinite;
 }
 
+.tools-marquee {
+  animation: hero-marquee 70s linear infinite;
+}
+
 .hero-marquee-paused {
   animation-play-state: paused;
 }

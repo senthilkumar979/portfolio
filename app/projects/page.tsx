@@ -6,7 +6,7 @@ import { workProjects } from "@/content/work";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Case studies — Peacock Studio, MentorBridge products, and enterprise frontend architecture.",
+    "Case studies — Peacock Studio, useThisHook, MentorBridge products, and enterprise frontend architecture.",
 };
 
 export default function ProjectsPage() {
@@ -21,7 +21,7 @@ export default function ProjectsPage() {
         <PageHeader
           eyebrow="Projects"
           title="Case studies"
-          description="Products I founded or mentored into production, plus enterprise platforms I architected — each with a write-up."
+          description="Products I founded or mentored into production, open-source libraries I publish, plus enterprise platforms I architected — each with a write-up."
         />
 
         <div className="mt-6 border-t border-border">

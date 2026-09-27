@@ -176,3 +176,18 @@ export const toolkitCategories: ToolkitCategory[] = [
     ],
   },
 ];
+
+export interface ToolkitCarouselItem {
+  name: string;
+  why: string;
+  category: string;
+}
+
+export const toolkitCarouselItems: ToolkitCarouselItem[] =
+  toolkitCategories.flatMap((category) =>
+    category.items.map((item) => ({
+      name: item.name,
+      why: item.why,
+      category: category.label,
+    })),
+  );

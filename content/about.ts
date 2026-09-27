@@ -19,7 +19,7 @@ export const aboutStats = [
 export const aboutStory = [
   "I am a Principal Frontend Developer at BNP Paribas Fortis in Brussels, focused on scalable enterprise platforms, clean architecture, and developer experience across squads.",
   "I establish reusable engineering foundations — UI platforms, development standards, and architecture patterns — that improve productivity and software quality. Mentorship is part of how I deliver: design reviews, workshops, and coaching that raise the floor for the whole team.",
-  "I founded Peacock Studio, a privacy-first developer productivity platform, and MentorBridge, a mentorship initiative that trains aspiring engineers and builds hiring pipelines into full-time roles — with a particular focus on students from rural backgrounds.",
+  "I founded Peacock Studio, a privacy-first developer productivity platform, and MentorBridge, a mentorship initiative that trains aspiring engineers and builds hiring pipelines into full-time roles — with a particular focus on students from rural backgrounds. I also publish useThisHook, a typed open-source React hooks library.",
 ] as const;
 
 export const aboutFocus = [
@@ -45,6 +45,13 @@ export const aboutFocus = [
   },
 ] as const;
 
+export const aboutToolkit = {
+  eyebrow: "Tools",
+  title: "What I reach for",
+  body: "Preferred technologies for platforms and products — hover a tool to see why it stays on the list.",
+  href: "/tools",
+} as const;
+
 export const aboutVentures = [
   {
     name: "Peacock Studio",
@@ -63,6 +70,15 @@ export const aboutVentures = [
     logo: "/products/mentorbridge-sm.png",
     logoClassName: "h-10 w-24 object-contain",
     body: "Engineering mentorship bridging academia and industry — 100+ trained, 25+ full-time placements.",
+  },
+  {
+    name: "useThisHook",
+    role: "Author",
+    href: "/projects/usethishook",
+    preview: "usethishook" as const,
+    logo: "/products/usethishook.svg",
+    logoClassName: "h-12 w-12 object-contain",
+    body: "Typed, tree-shakeable React hooks with zero runtime dependencies — drop one import into any app.",
   },
 ] as const;
 

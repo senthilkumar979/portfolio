@@ -40,6 +40,16 @@ export const linkPreviews = {
     logo: "/products/mentorbridge-sm.png",
     external: true,
   },
+  usethishook: {
+    id: "usethishook",
+    href: profile.socials.usethishook,
+    title: "useThisHook",
+    description:
+      "Typed library of custom React hooks — zero runtime dependencies, generated types, and live docs.",
+    meta: "usethishook.mentorbridge.in",
+    logo: "/products/usethishook.svg",
+    external: true,
+  },
   linkedin: {
     id: "linkedin",
     href: profile.socials.linkedin,

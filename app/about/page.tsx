@@ -6,6 +6,7 @@ import { AboutFocus } from "@/components/about/AboutFocus";
 import { AboutHero } from "@/components/about/AboutHero";
 import { AboutStats } from "@/components/about/AboutStats";
 import { AboutStory } from "@/components/about/AboutStory";
+import { AboutToolkit } from "@/components/about/AboutToolkit";
 import { AboutVentures } from "@/components/about/AboutVentures";
 import { Testimonials } from "@/components/Testimonials";
 import { profile } from "@/content/profile";
@@ -29,6 +30,7 @@ export default function AboutPage() {
         <AboutStory />
         <AboutCredentials />
         <AboutFocus />
+        <AboutToolkit />
         <AboutCareer />
         <AboutVentures />
         <Testimonials surface="about" />
